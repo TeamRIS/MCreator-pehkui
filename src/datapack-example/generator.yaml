@@ -1,0 +1,38 @@
+name: Example generator for(@buildfileversion)
+basefeatures: [model_json]
+status: dev
+buildfileversion: 0.0.1
+
+language_file:
+  format: json
+  root_folder: "@MODASSETSROOT/lang/"
+  langfile_name: "@langname.json"
+  
+source_root: "@WORKSPACEROOT/src/main/java"
+res_root: "@WORKSPACEROOT/src/main/resources"
+mod_assets_root: "@RESROOT/assets/@modid"
+mod_data_root: "@RESROOT/data/@modid"
+  
+structures_dir: "@MODDATAROOT/structures"
+sounds_dir: "@MODASSETSROOT/sounds"
+other_textures_dir: "@MODASSETSROOT/textures"
+block_textures_dir: "@MODASSETSROOT/textures/blocks"
+item_textures_dir: "@MODASSETSROOT/textures/items"
+armor_textures_dir: "@MODASSETSROOT/textures/models/armor"
+
+gradle:
+  setup_task: help
+  run_client: help
+  run_server: help
+  export_file: "build/libs/modid-1.0.jar"
+
+resources_setup_tasks:
+  - task: copy_file
+    from: "@MODASSETSROOT/textures/@modpicture.png"
+    to: "@RESROOT/logo.png"
+  - task: copy_models
+    type: OBJ
+    to: "@MODASSETSROOT/models/item"
+  - task: copy_models
+    type: JSON_noinlinetextures
+    to: "@MODASSETSROOT/models/custom"

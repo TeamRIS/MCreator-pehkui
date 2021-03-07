@@ -1,0 +1,10 @@
+{
+  "id": "generator-datapack-example",
+  "minversion": 202000300000,
+  "info": {
+    "name": "Example MCreator Generator Plugin",
+    "version": "0.0.1",
+    "description": "An Example Generator Plugin",
+    "author": "You!"
+  }
+}

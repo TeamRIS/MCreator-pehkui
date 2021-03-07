@@ -1,0 +1,15 @@
+.DS_Store
+
+*.ipr
+*.iws
+*.iml
+.idea/
+
+*.bbproject
+*.code-workspace
+
+build
+run
+target
+.gradle
+
